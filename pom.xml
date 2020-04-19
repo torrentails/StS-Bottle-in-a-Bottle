@@ -5,7 +5,7 @@
     <groupId>bottleinabottle</groupId>
     <artifactId>BottleInABottle</artifactId>
     <name>Bottle in a Bottle</name>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <description>A mod for Slay the Spire, featuring a collection of miscellaneous relics and other bits and bobs</description>
 
     <properties>

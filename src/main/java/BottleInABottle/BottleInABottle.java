@@ -5,6 +5,7 @@ import BottleInABottle.events.IdentityCrisisEvent;
 import BottleInABottle.relics.BottledPlaceholderRelic;
 import BottleInABottle.relics.BottledTime;
 import BottleInABottle.relics.PlaceholderRelic2;
+import BottleInABottle.relics.StaminaBar;
 import BottleInABottle.util.IDCheck;
 import BottleInABottle.util.TextureLoader;
 import BottleInABottle.variables.DefaultCustomVariable;
@@ -291,7 +292,8 @@ public class BottleInABottle
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new BottledTime(), RelicType.SHARED);
-        
+        BaseMod.addRelic(new StaminaBar(), RelicType.SHARED);
+
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
         UnlockTracker.markRelicAsSeen(BottledTime.ID);
         logger.info("Done adding relics!");
@@ -412,6 +414,8 @@ public class BottleInABottle
 
 
     public static String makePath(String resourcePath, String resourceType, String fileExtension) {
+        logger.info("Getting path for: " + resourcePath + "type: " + resourceType + "fileExt: " + fileExtension);
+
         if (fileExtension == null) {
             fileExtension = ".png";
         }
