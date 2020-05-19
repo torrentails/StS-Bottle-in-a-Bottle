@@ -8,6 +8,7 @@ import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundFi
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.actions.common.LosePercentHPAction;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -72,9 +73,8 @@ public class Paradox
 
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
-        this.superFlash();
-        this.addToTop(new LosePercentHPAction(50));
-        BottledTime.shocked = true;
+        this.dontTriggerOnUseCard = true;
+        AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
 
@@ -83,7 +83,12 @@ public class Paradox
 
 
     @Override
-    public void use(AbstractPlayer player, AbstractMonster monster) {}
+    public void use(AbstractPlayer player, AbstractMonster monster) {
+        if (this.dontTriggerOnUseCard) {
+            this.addToTop(new LosePercentHPAction(50));
+            BottledTime.shocked = true;
+        }
+    }
 
 
     @Override

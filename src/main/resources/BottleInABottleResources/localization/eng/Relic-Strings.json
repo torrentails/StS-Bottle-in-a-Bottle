@@ -44,9 +44,31 @@
   },
   "BottleInABottle:StaminaBar": {
     "NAME": "Stamina Bar",
-    "FLAVOR": "Why do they always run out way too fast?",
+    "FLAVOR": "Don't run out in the middle of combat!",
     "DESCRIPTIONS": [
       "Gain 4 Strength and 4 Dexterity at the start of combat. At the end of your first turn, lose 5 Strength and 5 Dexterity."
+    ]
+  },
+  "BottleInABottle:GoldArmour": {
+    "NAME": "Gold Armour",
+    "FLAVOR": "Thus the gods encased him in solid gold, that he may be a prisoner to his greed for all eternity.",
+    "DESCRIPTIONS": [
+      "On pickup, gain gold equal to 3 times your max HP and your max HP becomes 1. Damage is dealt to your gold supply before your HP. Whenever you would gain max HP, instead gain three times that much gold.",
+      "Damage is dealt to your gold supply before your HP. Whenever you would gain max HP, instead gain three times that much gold."
+    ]
+  },
+  "BottleInABottle:PreCharger": {
+    "NAME": "Pre-Charger",
+    "FLAVOR": "Glaive beam is ready and charged captain!",
+    "DESCRIPTIONS": [
+      "At the start of combat, each card in your deck that costs 2 or more costs 1 less until played."
+    ]
+  },
+  "BottleInABottle:Flywheel": {
+    "NAME": "Flywheel",
+    "FLAVOR": "Batteries of the future!",
+    "DESCRIPTIONS": [
+      "Any energy you have remaining at the end of a non-boss, non-elite battle is carried over to the start of the next battle."
     ]
   }
 }

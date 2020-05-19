@@ -32,9 +32,6 @@ ModTheSpire.iml
 .settings/
 .factorypath
 
-# maven build target
-target/
-
 # Custom
 _archive/
 backup/
@@ -50,6 +47,9 @@ _decompile.bat
 _runJ9.bat
 *.displayconfig
 
+# maven build target
+target/
+
 # maven other
 dependency-reduced-pom.xml
 
@@ -59,3 +59,6 @@ dependency-reduced-pom.xml
 # gradle
 .gradle
 build
+
+# gradle wrapper
+!/gradle/wrapper/gradle-wrapper.jar

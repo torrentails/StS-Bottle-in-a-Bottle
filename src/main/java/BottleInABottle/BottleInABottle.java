@@ -2,10 +2,7 @@ package BottleInABottle;
 
 import BottleInABottle.cards.curses.Paradox;
 import BottleInABottle.events.IdentityCrisisEvent;
-import BottleInABottle.relics.BottledPlaceholderRelic;
-import BottleInABottle.relics.BottledTime;
-import BottleInABottle.relics.PlaceholderRelic2;
-import BottleInABottle.relics.StaminaBar;
+import BottleInABottle.relics.*;
 import BottleInABottle.util.IDCheck;
 import BottleInABottle.util.TextureLoader;
 import BottleInABottle.variables.DefaultCustomVariable;
@@ -200,7 +197,7 @@ public class BottleInABottle
     
     // @Override
     // public void receiveEditCharacters() {
-    //     logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
+    //     logger.info("Beginning to edit core. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
     //
     //     BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
     //             THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
@@ -293,9 +290,11 @@ public class BottleInABottle
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new BottledTime(), RelicType.SHARED);
         BaseMod.addRelic(new StaminaBar(), RelicType.SHARED);
+        BaseMod.addRelic(new GoldArmour(), RelicType.SHARED);
+        BaseMod.addRelic(new PreCharger(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-        UnlockTracker.markRelicAsSeen(BottledTime.ID);
+        // UnlockTracker.markRelicAsSeen(BottledTime.ID);
         logger.info("Done adding relics!");
     }
     
