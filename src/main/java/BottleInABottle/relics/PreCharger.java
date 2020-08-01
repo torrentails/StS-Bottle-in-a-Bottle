@@ -1,6 +1,7 @@
 package BottleInABottle.relics;
 
 import BottleInABottle.BottleInABottle;
+import BottleInABottle.actions.UpdateCardCostAction;
 import BottleInABottle.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -22,7 +23,7 @@ public class PreCharger
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(PreCharger.class.getSimpleName()));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(PreCharger.class.getSimpleName()));
 
-    private HashMap<AbstractCard, Boolean> cards = new HashMap<>();
+    private final HashMap<AbstractCard, Boolean> cards = new HashMap<>();
 
 
     public PreCharger() {
@@ -37,7 +38,7 @@ public class PreCharger
 
 
     @Override
-    public void atBattleStartPreDraw() {
+    public void atBattleStart() {
         AbstractPlayer p = AbstractDungeon.player;
         for (AbstractCard c : p.hand.group) reduceCost(c);
         for (AbstractCard c : p.drawPile.group) reduceCost(c);
@@ -47,13 +48,15 @@ public class PreCharger
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction cardAction) {
+        // TODO: Still actually costs 2 despite showing 1
         if (cards.containsKey(card) && !cards.get(card)) {
             this.flash();
-            card.updateCost(1);
+            // card.modifyCostForCombat(1);
             cards.put(card, true);
-            if (card.cost == card.costForTurn) {
-                card.isCostModified = false;
-            }
+            // if (card.cost == card.costForTurn) {
+            //     card.isCostModified = false;
+            // }
+            AbstractDungeon.actionManager.addToBottom(new UpdateCardCostAction(card, 1));
         }
     }
 

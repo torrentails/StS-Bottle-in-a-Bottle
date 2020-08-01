@@ -3,6 +3,7 @@ package BottleInABottle;
 import BottleInABottle.cards.curses.Paradox;
 import BottleInABottle.events.IdentityCrisisEvent;
 import BottleInABottle.relics.*;
+import BottleInABottle.relics.Bottles.BottledTime;
 import BottleInABottle.util.IDCheck;
 import BottleInABottle.util.TextureLoader;
 import BottleInABottle.variables.DefaultCustomVariable;
@@ -14,7 +15,6 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
@@ -22,7 +22,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.TheCity;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -256,12 +255,14 @@ public class BottleInABottle
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
     }
-    
+
+
+
     // =============== / POST-INITIALIZE/ =================
     
     
     // ================ ADD POTIONS ===================
-    
+    @SuppressWarnings("unused")
     public void receiveEditPotions() {
         logger.info("Beginning to edit potions");
         
@@ -292,6 +293,8 @@ public class BottleInABottle
         BaseMod.addRelic(new StaminaBar(), RelicType.SHARED);
         BaseMod.addRelic(new GoldArmour(), RelicType.SHARED);
         BaseMod.addRelic(new PreCharger(), RelicType.SHARED);
+        BaseMod.addRelic(new Flywheel(), RelicType.SHARED);
+        BaseMod.addRelic(new PerpetualIceCreamGenerator(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
         // UnlockTracker.markRelicAsSeen(BottledTime.ID);
