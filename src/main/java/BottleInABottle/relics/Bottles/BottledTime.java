@@ -1,4 +1,4 @@
-package BottleInABottle.relics;
+package BottleInABottle.relics.Bottles;
 
 import BottleInABottle.BottleInABottle;
 import BottleInABottle.cards.curses.Paradox;
