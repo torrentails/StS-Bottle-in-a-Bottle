@@ -68,7 +68,17 @@
     "NAME": "Flywheel",
     "FLAVOR": "Batteries of the future!",
     "DESCRIPTIONS": [
-      "Any energy you have remaining at the end of a non-boss, non-elite battle is carried over to the start of the next battle."
+      "Any energy you have remaining at the end of a non-boss battle is carried over to the start of the next battle.",
+      "#ySynergy - ",
+      "Ok, but hear me out— NL Infinite ice cream.",
+    ]
+  },
+  "BottleInABottle:PerpetualIceCreamGenerator": {
+    "NAME": "Perpetual Ice Cream Generator",
+    "FLAVOR": "I scream, you scream, we all scream for infinite ice cream!",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn.",
+
     ]
   }
 }
