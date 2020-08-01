@@ -1,7 +1,7 @@
 package BottleInABottle.cards.curses;
 
 import BottleInABottle.BottleInABottle;
-import BottleInABottle.relics.BottledTime;
+import BottleInABottle.relics.Bottles.BottledTime;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.CustomSavable;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;

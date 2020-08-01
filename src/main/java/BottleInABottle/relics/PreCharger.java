@@ -48,14 +48,9 @@ public class PreCharger
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction cardAction) {
-        // TODO: Still actually costs 2 despite showing 1
         if (cards.containsKey(card) && !cards.get(card)) {
             this.flash();
-            // card.modifyCostForCombat(1);
             cards.put(card, true);
-            // if (card.cost == card.costForTurn) {
-            //     card.isCostModified = false;
-            // }
             AbstractDungeon.actionManager.addToBottom(new UpdateCardCostAction(card, 1));
         }
     }
