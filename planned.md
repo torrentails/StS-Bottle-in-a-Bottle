@@ -102,3 +102,13 @@ Apply 1 chain each time you hit an enemy with an attack.
 
 Chain X
     Target takes X extra damage from attacks. Removed at the start of the enemies turn.
+    
+### ??? (Boss)
+Gain [E] at the start of your turn. Enemies go first in future battles.
+
+### Bottled Genie (Boss)
+Right-click to activate: Loose a charge and choose one:
+Power: Gain [E]
+Strength: Gain 2 Strength and 2 Dexterity
+Wisdom: Draw 3 cards
+Wealth: Gain 100 gold

@@ -1,13 +1,9 @@
 package BottleInABottle.relics;
 
 import BottleInABottle.BottleInABottle;
-import BottleInABottle.actions.FlywheelSynergyAction;
 import BottleInABottle.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -24,12 +20,10 @@ public class Flywheel extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(Flywheel.class.getSimpleName()));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(Flywheel.class.getSimpleName()));
     private String synstr;
-    private boolean synActivated;
 
 
     public Flywheel() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
-        this.synActivated = false;
         tips.clear();
         tips.add(new PowerTip(name, description));
         tips.add(new PowerTip(DESCRIPTIONS[1] + this.synstr, DESCRIPTIONS[2]));
@@ -55,20 +49,6 @@ public class Flywheel extends CustomRelic {
             this.counter = EnergyPanel.getCurrentEnergy();
         }
     }
-
-
-    @Override
-    public void update() {
-        super.update();
-
-        if (!this.synActivated &&
-            AbstractDungeon.player.hasRelic(Flywheel.ID) &&
-            AbstractDungeon.player.hasRelic(IceCream.ID)) {
-            this.synActivated = true;
-            AbstractDungeon.actionManager.addToBottom(new FlywheelSynergyAction());
-        }
-    }
-
 
     @Override
     public String getUpdatedDescription() {
