@@ -116,18 +116,21 @@ public class BottledTime extends CustomRelic implements CustomBottleRelic, Custo
             setShockedDescription();
         }
 
-        ArrayList<AbstractCard> selectedCards = AbstractDungeon.gridSelectScreen.selectedCards;
-        if (!cardSelected && !selectedCards.isEmpty()) {
-            cardSelected = true;
-            card = selectedCards.get(0);
-            bottledTimeCardField.set(card, true);
 
-            UnlockTracker.markCardAsSeen(Paradox.ID);
-            AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(new Paradox(card.cost), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+        if (!cardSelected) {
+            ArrayList<AbstractCard> selectedCards = AbstractDungeon.gridSelectScreen.selectedCards;
+            if (!selectedCards.isEmpty()) {
+                cardSelected = true;
+                card = selectedCards.get(0);
+                bottledTimeCardField.set(card, true);
 
-            AbstractDungeon.getCurrRoom().phase = curPhase;
-            selectedCards.clear();
-            setDescriptionAfterLoading();
+                UnlockTracker.markCardAsSeen(Paradox.ID);
+                AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(new Paradox(card.cost), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+
+                AbstractDungeon.getCurrRoom().phase = curPhase;
+                selectedCards.clear();
+                setDescriptionAfterLoading();
+            }
         }
     }
 
