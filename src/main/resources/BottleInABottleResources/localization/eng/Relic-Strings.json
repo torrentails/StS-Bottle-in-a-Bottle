@@ -30,7 +30,8 @@
       ".",
       "Select a card to bottle for "
     ]
-  },
+  }
+  ,
   "BottleInABottle:BottledTime": {
     "NAME": "Bottled Time",
     "FLAVOR": "“Time is an illusion.” -Albert Einstein",
@@ -41,14 +42,16 @@
       "Select a card to bottle for ",
       " for free at the start of each combat. NL Oww! This... thing... hurts!"
     ]
-  },
+  }
+  ,
   "BottleInABottle:StaminaBar": {
     "NAME": "Stamina Bar",
     "FLAVOR": "Don't run out in the middle of combat!",
     "DESCRIPTIONS": [
       "Gain 4 Strength and 4 Dexterity at the start of combat. At the end of your first turn, lose 5 Strength and 5 Dexterity."
     ]
-  },
+  }
+  ,
   "BottleInABottle:GoldArmour": {
     "NAME": "Gold Armour",
     "FLAVOR": "Thus the gods encased him in solid gold, that he may be a prisoner to his greed for all eternity.",
@@ -56,14 +59,16 @@
       "On pickup, gain gold equal to 3 times your max HP and your max HP becomes 1. Damage is dealt to your gold supply before your HP. Whenever you would gain max HP, instead gain three times that much gold.",
       "Damage is dealt to your gold supply before your HP. Whenever you would gain max HP, instead gain three times that much gold."
     ]
-  },
+  }
+  ,
   "BottleInABottle:PreCharger": {
     "NAME": "Pre-Charger",
     "FLAVOR": "Glaive beam is ready and charged captain!",
     "DESCRIPTIONS": [
       "At the start of combat, each card in your deck that costs 2 or more costs 1 less until played."
     ]
-  },
+  }
+  ,
   "BottleInABottle:Flywheel": {
     "NAME": "Flywheel",
     "FLAVOR": "Batteries of the future!",
@@ -72,13 +77,24 @@
       "#ySynergy - ",
       "Ok, but hear me out— NL Infinite ice cream.",
     ]
-  },
+  }
+  ,
   "BottleInABottle:PerpetualIceCreamGenerator": {
     "NAME": "Perpetual Ice Cream Generator",
     "FLAVOR": "I scream, you scream, we all scream for infinite ice cream!",
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn.",
-
+    ]
+  }
+  ,
+  "BottleInABottle:InvertedBottle": {
+    "NAME": "Inverted Bottle",
+    "FLAVOR": "Well... that's different.",
+    "DESCRIPTIONS": [
+      "On pickup, chose a card. At the start of battle, put the chosen card into your discard pile.",
+      "At the start of battle, put ",
+      " into your discard pile.",
+      "Select a card to bottle for "
     ]
   }
 }

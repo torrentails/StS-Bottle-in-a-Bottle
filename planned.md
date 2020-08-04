@@ -4,7 +4,7 @@ Gain [E] at the start of your turn. Every 30 seconds in combat, gain a random de
 
 ### Event: Paradox (City/Rare)
     
-<only triggered if the player has the Paradox curse in their deck>
+*only triggered if the player has the Paradox curse in their deck*
 While wandering the crumbling streets of what was clearly a mighty city long ago, you suddenly get the feeling that you're being followed.
 
 You pickup the pace more and more as you try to loose your shadow. Finally, after a series of quick turns and not a small amount of parkour, you stop to catch your breath, satisfied that they've well and truly lost your trail.
@@ -47,10 +47,6 @@ Gain [E] at the start of your turn. Fusion Generator stops working for the rest 
 All Damage hits and Block gains are queued instead of applying immediately. Whenever your energy hits 0, release all queued Damage and Block.
 Synergy - Icecream:
     If you have no [E] at the end of your turn, gain [E] at the start of your next turn.
-
-### Inverted Bottle (Uncommon)
-	
-On pickup, chose a card. At the start of battle, put the chosen card into your discard pile.
 
 ### Display Bottle (Rare)
 	

@@ -11,12 +11,15 @@ public class AbstractCardPatch {
     @SpirePatch(clz = AbstractCard.class, method = SpirePatch.CLASS)
     public static class Fields {
         public static SpireField<Boolean> bottledTimeCardField = new SpireField<>(() -> false);
+        public static SpireField<Boolean> invertedBottleCardField = new SpireField<>(() -> false);
 
 
         @SpirePatch(clz = AbstractCard.class, method = "makeStatEquivalentCopy")
-        public static class BottledTimeCardField {
+        public static class CardField {
             public static AbstractCard Postfix(AbstractCard result, AbstractCard _inst) {
                 bottledTimeCardField.set(result, bottledTimeCardField.get(_inst));
+                invertedBottleCardField.set(result, invertedBottleCardField.get(_inst));
+
                 return result;
             }
         }

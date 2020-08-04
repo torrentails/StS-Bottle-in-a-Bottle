@@ -4,6 +4,7 @@ import BottleInABottle.cards.curses.Paradox;
 import BottleInABottle.events.IdentityCrisisEvent;
 import BottleInABottle.relics.*;
 import BottleInABottle.relics.Bottles.BottledTime;
+import BottleInABottle.relics.Bottles.InvertedBottle;
 import BottleInABottle.util.IDCheck;
 import BottleInABottle.util.TextureLoader;
 import BottleInABottle.variables.DefaultCustomVariable;
@@ -296,6 +297,7 @@ public class BottleInABottle
         BaseMod.addRelic(new PreCharger(), RelicType.SHARED);
         BaseMod.addRelic(new Flywheel(), RelicType.SHARED);
         BaseMod.addRelic(new PerpetualIceCreamGenerator(), RelicType.SHARED);
+        BaseMod.addRelic(new InvertedBottle(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
         // UnlockTracker.markRelicAsSeen(BottledTime.ID);
